@@ -1,0 +1,27 @@
+{
+    "name": "hiraeth/psysh",
+    "description": "PsySH for the Hiraeth Nano-Framework",
+    "license": "MIT",
+    "authors": [
+        {
+            "name":  "Matthew J. Sahagian",
+            "email": "msahagian@dotink.org",
+            "role":  "Lead Architect / Developer"
+        }
+    ],
+    "require": {
+        "psy/psysh": "^0.8.6"
+    },
+    "autoload": {
+        "classmap": ["src/"]
+    },
+    "type": "opus-package",
+    "extra": {
+        "opus": {
+            "hiraeth/app": {
+                "plugin/config": "",
+                "plugin/bin": ""
+            }
+        }
+    }
+}
