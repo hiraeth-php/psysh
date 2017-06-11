@@ -14,7 +14,13 @@ $loader  = require $root_path . '/vendor/autoload.php';
 $hiraeth = new Hiraeth\Application($root_path, $loader);
 
 exit($hiraeth->run(function(Psy\Shell $shell) {
-	$shell->setScopeVariables(['app' => $this]);
+	$GLOBALS['_SESSION'] = array();
+
+	$shell->setScopeVariables([
+		'app'    => $this,
+		'broker' => $this->broker,
+		'config' => $this->config
+	]);
 
 	exit($shell->run());
 }));
