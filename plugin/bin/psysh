@@ -22,5 +22,5 @@ exit($hiraeth->run(function(Psy\Shell $shell) {
 		'config' => $this->config
 	]);
 
-	exit($shell->run());
+	return $shell->run();
 }));
